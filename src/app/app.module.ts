@@ -19,7 +19,7 @@ import { CategoryEditComponent } from './category-edit/category-edit.component';
 @NgModule({
   declarations: [AppComponent, CategoryComponent, CategoryAddComponent,CategoryDetailComponent,CategoryEditComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
