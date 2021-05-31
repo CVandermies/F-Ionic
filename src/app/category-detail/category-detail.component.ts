@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-category-detail',
@@ -6,6 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-detail.component.scss'],
 })
 export class CategoryDetailComponent implements OnInit {
+
+  @Input() category : any = {  
+    id: 0, 
+    label : '', 
+    description: '', 
+    movies : [] };
+
+    movies : any = {  
+      id: 0, 
+      title : '', 
+      content: '', 
+      rating : 0,
+      image : '' };
 
   constructor() { }
 

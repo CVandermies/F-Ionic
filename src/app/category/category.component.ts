@@ -11,6 +11,13 @@ import { Router } from '@angular/router';
 export class CategoryComponent implements OnInit {
 
   categories: Categorie[] = [];
+  category: Categorie = {  
+    id: 0, 
+    label : 'test', 
+    description: 'test', 
+    movies : [] };
+  show = false;
+
 
   //exécuté au moment de la création de ce component
   constructor(public rest: RestService, private router: Router) { }
@@ -31,5 +38,15 @@ export class CategoryComponent implements OnInit {
   add() {
     this.router.navigate(['/category-add']);
   }
+  
+  showDetail(category){
+    console.log(category);
+    this.category = category;
+    this.show = true;
+  }
 
+  editCategory(id:number){
+    this.router.navigate(['/category/edit/' + id]);
+  }
+  
 }

@@ -1,3 +1,6 @@
-<p>
-  category-detail works!
-</p>
+<ion-row>Description : {{ category.description }}</ion-row><br>
+<ion-row><b>Films :</b></ion-row>
+
+<ion-list *ngFor="let m of category.movies">
+    <ion-row>{{ m.title }}</ion-row>
+</ion-list>

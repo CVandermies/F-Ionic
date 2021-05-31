@@ -1,3 +1,28 @@
-<p>
-  category-edit works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2> Modifier une catégorie</h2>
+  <div>
+    <ion-label>
+      <ion-input [(ngModel)]="category.label" placeholder="Label de la catégorie"></ion-input>
+    </ion-label><br>
+
+    <ion-label>
+      <ion-input [(ngModel)]="category.description" placeholder="Description de la catégorie"></ion-input>
+    </ion-label>
+
+    <ion-button (click)='updateCategory()'>Enregistrer</ion-button>
+    <ion-button (click)= 'deleteCategory(category.id)' style='color:rgb(189, 26, 26)'> Supprimer </ion-button>
+
+  </div>
+</ion-content>

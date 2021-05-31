@@ -22,17 +22,12 @@ const routes: Routes = [
   },
 
   {
-    path: 'category-add',
+    path: 'category/add',
     component : CategoryAddComponent
   },
 
   {
-    path: 'category-detail',
-    component : CategoryDetailComponent
-  },
-
-  {
-    path: 'category-edit/:id',
+    path: 'category/edit/:id',
     component : CategoryEditComponent
   },
 

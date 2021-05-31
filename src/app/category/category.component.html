@@ -20,12 +20,17 @@
 
   <ion-list>
     <ion-item *ngFor="let c of categories; let i=index">
-      <ion-label > {{ c.label }}</ion-label>
-      
+      <ion-label (click)="showDetail(c)"> {{ c.label }}</ion-label>
+      <ion-button (click)='editCategory(c.id)'>Modifier</ion-button>
     </ion-item>
+
+    <ion-card *ngIf="show">
+      <app-category-detail [category]="category"></app-category-detail>
+    </ion-card>
+
   </ion-list>
 
-  <ion-fab vertical="bottom" horizontal='end'>
+  <ion-fab vertical="top" horizontal='end'>
     <ion-fab-button [routerLink]="['/category/add']">
       <ion-icon name="add"></ion-icon> 
     </ion-fab-button>

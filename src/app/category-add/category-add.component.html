@@ -1,3 +1,27 @@
-<p>
-  category-add works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2> Ajouter une catégorie</h2>
+  <div>
+    <ion-label>
+      <ion-input [(ngModel)]="category.label" placeholder="Label de la catégorie"></ion-input>
+    </ion-label><br>
+
+    <ion-label>
+      <ion-input [(ngModel)]="category.description" placeholder="Description de la catégorie"></ion-input>
+    </ion-label>
+
+    <ion-button (click)='addCategory()'>Ajouter</ion-button>
+
+  </div>
+</ion-content>
