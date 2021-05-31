@@ -1,0 +1,7 @@
+{
+  "name": "F-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
